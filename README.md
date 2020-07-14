@@ -1,2 +1,2 @@
 # pwp-calvin-reed
-PWP for Bootcamp.
+This is my personal website for the CNM Ingenuity fullstack bootcamp.
