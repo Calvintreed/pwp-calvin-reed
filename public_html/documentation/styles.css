@@ -5,16 +5,24 @@ li{
 }
 
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.4)), url("open book.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url("open book.webp");
     background-size: cover;
     background-position: center;
     height: auto;
     color: red;
+    display: flex;
 }
 
 .picture1{
     height: auto;
     width: 200px;
-    float: end;
     background-size: contain;
+    flex-direction: row-reverse;
+}
+
+p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
