@@ -1,3 +1,8 @@
+ul{
+    background-color: gray;
+}
+
+
 li{
     margin: 10px 0px;
     list-style-type: square;
@@ -5,16 +10,19 @@ li{
 }
 
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.4)), url("open book.webp");
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    color: red;
+    color: darkgreen;
+    background-color: darkgoldenrod;
 }
 
 .picture1{
+    display:block;
     height: auto;
-    width: 200px;
-    float: end;
-    background-size: contain;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+p{
+    display: block;
+
 }
