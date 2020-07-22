@@ -26,3 +26,15 @@ p{
     display: block;
 
 }
+
+.picture2{
+    height:1000px;
+    align-content:center;
+}
+.picture3{
+    height: 1000px;
+    align-content: center;
+}
+.container{
+    display: inline-flex;
+}
