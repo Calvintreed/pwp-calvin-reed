@@ -29,12 +29,16 @@ p{
 
 .picture2{
     height:1000px;
-    align-content:center;
 }
 .picture3{
     height: 1000px;
-    align-content: center;
 }
 .container{
-    display: inline-flex;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgContainer{
+    display:block;
+    text-align: center;
 }
