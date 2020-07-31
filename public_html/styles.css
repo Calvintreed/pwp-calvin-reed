@@ -1,3 +1,14 @@
 .welcome-text{
     color: #2A3036;
 }
+
+#jumbotron-1{
+    background-image: url("Background.jpg");
+    height: auto;
+    width: auto;
+}
+
+
+.footer{
+    background-color: #2A3036;
+}
