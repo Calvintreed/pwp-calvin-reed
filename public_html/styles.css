@@ -12,18 +12,18 @@
 }
 
 .footer{
-    background-color: #F3F4F0;
+    background-color: #2A3036;
     display: inline-block;
     text-align: center;
     width: 100%;
 }
 
 .fa-github{
-    color: #2A3036;
+    color: #F3F4F0;
 }
 
 .fa-linkedin{
-    color: #2A3036;
+    color: #F3F4F0;
 }
 
 #welcome{
