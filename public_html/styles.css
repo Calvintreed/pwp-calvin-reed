@@ -4,7 +4,7 @@
 
 #jumbotron-1{
     background-image: url("Background.jpg");
-    height: 50vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,18 @@
 }
 
 .footer{
-    background-color: #2A3036;
+    background-color: #F3F4F0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.fa-github{
+    color: #2A3036;
+}
+
+.fa-linkedin{
+    color: #2A3036;
 }
 
 #welcome{
