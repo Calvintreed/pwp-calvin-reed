@@ -2,4 +2,4 @@
 /.idea
 /vendor
 /src/node_modules
-.env
+/src/.env
