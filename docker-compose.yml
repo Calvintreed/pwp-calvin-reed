@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    build: src
+    build: ./src
     container_name: "backend"
     env_file:
       - ./src/.env

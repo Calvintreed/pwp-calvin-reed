@@ -10,7 +10,7 @@ const app = express()
 
 app.use(morgan('dev'))
 app.use(express.json())
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: false }))
 app.use(bodyParser.json())
 const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECAPTCHA_SECRET_KEY)
 
@@ -22,7 +22,8 @@ const requestValidation = [
 ]
 
 const indexRoute = express.Router()
-const indexRouteMiddleware = (request, response, nextFunction)  => {
+
+const indexRouteMiddleware = (request, response, nextFunction) => {
   return response.json("express server is live")
 }
 
@@ -64,6 +65,6 @@ indexRoute.route('/')
   .get(indexRouteMiddleware)
   .post(recaptcha.middleware.verify, requestValidation, handleEmailPost)
 
-app.use('/apis', indexRoute)
+app.use(`/apis`, indexRoute)
 
-app.listen(4200, ()=> {console.log("express server was successfully built")})
+app.listen(4200, () => {console.log("express server was successfully built")})
