@@ -45,7 +45,7 @@ const handleEmailPost = (request, response, nextFunction) => {
   const mailgunData = {
     to: process.env.MAIL_RECIPIENT,
     from: `Mailgun Sandbox <postermaster@${process.env.MAILGUN_DOMAIN}>`,
-    subject: `${name} - ${email} `,
+    subject: `${name} - ${email}`,
     text: message
   }
 
