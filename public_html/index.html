@@ -74,20 +74,20 @@
         <div class="row">
             <form action="./apis/" class="col-4" id="contact" method="post" novalidate>
                 <div class="form-group mt-4 pl-0">
-                    <input type="text" class="form-control" id="exampleName" placeholder="Your name goes here!">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name goes here!">
                 </div>
                 <div class="form-group pl-0">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
                            placeholder="Your email goes here!">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
                 <div class="form-group pl-0">
-            <textarea class="form-control mb-4 " rows="4" id="exampleInputMessage"
-                      placeholder="Your message goes here!">
+            <textarea class="form-control mb-4 " rows="4" id="message" name="message" placeholder="Your message goes here!">
             </textarea>
                 </div>
-                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="g-recaptcha" data-sitekey="6Lcamr0ZAAAAACLcqzusVVt7DU8_3UwQ84UWeLU1"></div>
             </form>
             <div id="output-area"></div>
             <div class="col mt-auto mb-auto">
@@ -97,8 +97,6 @@
                     a business day and get right back to you!</p>
             </div>
         </div>
-
-        <div class="g-recaptcha" data-sitekey="6Lcamr0ZAAAAACLcqzusVVt7DU8_3UwQ84UWeLU1"></div>
     </div>
 
 

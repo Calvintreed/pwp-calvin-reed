@@ -7,7 +7,7 @@ services:
     env_file:
       - ./src/.env
   frontend:
-      container_name: "frontend "
+      container_name: "frontend"
       build: ./public_html
       ports:
       - 80:80
