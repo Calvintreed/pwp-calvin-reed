@@ -35,10 +35,10 @@ $(document).ready( function () {
     submitHandler: function (form) {
       $("#contact").ajaxSubmit({
         type: "POST",
-        url: $('#contact').attr('action'),
+        url: $('contact').attr('action'),
         success: function (ajaxOutput) {
           $("#output-area").css("display", "")
-          $("#output-area").html(ajaxOutput)
+          $("output-area").html(ajaxOutput)
 
           if($(".alert-success").length >= 1) {
             $("#contact")[0].reset()
