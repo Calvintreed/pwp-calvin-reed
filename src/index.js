@@ -61,6 +61,6 @@ indexRoute.route('/')
   .get(indexRouteMiddleware)
   .post(recaptcha.middleware.verify, requestValidation, handleEmailPost)
 
-app.use(`/apis`, indexRoute)
+app.use('/apis', indexRoute)
 
 app.listen(4200, () => {console.log("express server was successfully built")})
