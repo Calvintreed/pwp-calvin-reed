@@ -15,7 +15,7 @@ $(document).ready(function () {
       message: {
         required: true,
         maxlength: 2000,
-      },
+      }
     },
     messages: {
       name: {
@@ -28,7 +28,7 @@ $(document).ready(function () {
       message: {
         required: 'Message is a required field.',
         maxlength: 'Message is too long.',
-      },
+      }
     },
     submitHandler: function (form) {
       $("#contact").ajaxSubmit({

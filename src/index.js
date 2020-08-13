@@ -16,8 +16,8 @@ const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECA
 
 const requestValidation = [
   check("email", "A valid email is required.").isEmail().normalizeEmail(),
-  check("name", "a Valid name is required.").not().isEmpty().trim().escape(),
-  check("message", "A message is required to send an email.").not().isEmpty().trim().escape().isLength({max: 2000})
+  check("name", "A valid name is required.").not().isEmpty().trim().escape(),
+  check("message", "A valid message is required to send an email.").not().isEmpty().trim().escape().isLength({max: 2000})
 ]
 
 const indexRoute = express.Router()
@@ -47,7 +47,6 @@ const handleEmailPost = (request, response, nextFunction) => {
     subject: `${name} - ${email}`,
     text: message
   }
-  
   mg.messages().send(mailgunData, (error) => {
     if (error) {
       return response.send(Buffer.from(`<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong> Unable to send email error with email sender</div>`))
