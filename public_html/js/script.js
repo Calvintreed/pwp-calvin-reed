@@ -1,9 +1,9 @@
 $(document).ready(function () {
-  $("#contact").validate({
+  $(`#contact`).validate({
     debug: true,
-    errorClass: "alert alert-danger",
-    errorLabelContainer: "#output-area",
-    errorElement: "div",
+    errorClass: 'alert alert-danger',
+    errorLabelContainer: '#output-area',
+    errorElement: 'div',
     rules: {
       name: {
         required: true
@@ -14,21 +14,21 @@ $(document).ready(function () {
       },
       message: {
         required: true,
-        maxlength: 2000
-      }
+        maxlength: 2000,
+      },
     },
     messages: {
       name: {
-        required: "Name is a required field."
+        required: 'Name is a required field.',
       },
       email: {
-        required: "Email is a required field.",
-        email: "Please provide a valid email address."
+        required: 'Email is a required field.',
+        email: 'Please provide a valid email address.',
       },
       message: {
-        required: "Message is a required field.",
-        maxlength: "Message is too long."
-      }
+        required: 'Message is a required field.',
+        maxlength: 'Message is too long.',
+      },
     },
     submitHandler: function (form) {
       $("#contact").ajaxSubmit({
@@ -37,6 +37,7 @@ $(document).ready(function () {
         success: function (ajaxOutput) {
           $("#output-area").css("display", "")
           $("#output-area").html(ajaxOutput)
+
           if($(".alert-success").length >= 1) {
             $("#contact")[0].reset()
           }

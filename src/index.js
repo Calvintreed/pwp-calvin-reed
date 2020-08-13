@@ -32,12 +32,12 @@ const handleEmailPost = (request, response, nextFunction) => {
     return response.send(`<div class='alert alert-danger' role='alert'><strong>Oh Snap!</strong>There was an error with Recaptcha please try again</div>`)
   }
   const errors = validationResult(request)
-  console.log("madeitpasterrorcheck1")
+
   if (!errors.isEmpty()) {
     const currentError = errors.array()[0]
     return response.send(Buffer.from(`<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong> ${currentError.msg}</div>`))
   }
-  console.log("madeitpasterrorcheck2")
+
   const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN})
   const {email, name, message} = request.body
 
@@ -47,7 +47,7 @@ const handleEmailPost = (request, response, nextFunction) => {
     subject: `${name} - ${email}`,
     text: message
   }
-  console.log("madeitpasterrorcheck3")
+  
   mg.messages().send(mailgunData, (error) => {
     if (error) {
       return response.send(Buffer.from(`<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong> Unable to send email error with email sender</div>`))
