@@ -17,7 +17,7 @@ const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECA
 
 const requestValidation = [
   check("email", "A valid email is required.").isEmail().normalizeEmail(),
-  check("name", "a Valid name is requred.").not().isEmpty().trim().escape(),
+  check("name", "a Valid name is required.").not().isEmpty().trim().escape(),
   check("message", "A message is required to send an email.").not().isEmpty().trim().escape().isLength({max:2000})
 ]
 
@@ -29,17 +29,17 @@ const indexRouteMiddleware = (request, response, nextFunction) => {
 
 
 const handleEmailPost = (request, response, nextFunction) => {
-  response.append('Content-Type', 'text/html')
+  response.append('Content-Type','text/html')
   if (request.recaptcha.error) {
     return response.send(`<div class='alert alert-danger' role='alert'><strong>Oh Snap!</strong>There was an error with Recaptcha please try again</div>`)
   }
   const errors = validationResult(request)
-
+    console.log ("madeitpasterrorcheck1")
   if (!errors.isEmpty()) {
     const currentError = errors.array()[0]
     return response.send(Buffer.from(`<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong> ${currentError.msg}</div>`))
   }
-
+      console.log ("madeitpasterrorcheck2")
   const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN})
   const {email, name, message} = request.body
 
@@ -49,7 +49,7 @@ const handleEmailPost = (request, response, nextFunction) => {
     subject: `${name} - ${email}`,
     text: message
   }
-
+    console.log ("madeitpasterrorcheck3")
   mg.messages().send(mailgunData, (error) => {
     if (error) {
       return response.send(Buffer.from(`<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong> Unable to send email error with email sender</div>`))
