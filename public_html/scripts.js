@@ -1,3 +1,3 @@
-$('#personalPortfolio').on('shown.bs.modal', function () {
-  $('#trigger-personal').trigger('focus')
+$('#trigger-personal').click('shown.bs.modal', function () {
+  $('#personalPortfolio').modal('show')
 })
