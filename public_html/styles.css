@@ -46,3 +46,15 @@
 #portfolio{
     background-color: #EC9C46;
 }
+
+.cover {
+    object-fit: cover;
+}
+
+.lead:hover {
+    color: #F3F4F0;
+}
+
+.lead {
+    cursor: pointer;
+}
