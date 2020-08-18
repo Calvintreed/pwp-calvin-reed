@@ -58,3 +58,7 @@
 .lead {
     cursor: pointer;
 }
+
+#footer-text {
+    font-size: 3vh;
+}

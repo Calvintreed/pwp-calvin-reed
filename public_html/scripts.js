@@ -13,3 +13,7 @@ $('#trigger-show').click('shown.bs.modal', function () {
 $('#trigger-current').click('shown.bs.modal', function () {
   $('#photographyWork').modal('show')
 })
+
+$('.carousel').carousel({
+  interval: 2000
+})
