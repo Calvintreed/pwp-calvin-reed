@@ -100,13 +100,19 @@
                     <label for="message">Message</label>
                     <textarea class="form-control mb-4" rows="4" id="message" name="message"></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark mb-3">Submit</button>
+                <div class="row">
+                    <div class="col-4">
+                    <button type="submit" class="btn btn-dark btn-block mb-3">Submit</button>
+                    </div>
+                    <div class="col-8" id="output-area"></div>
+                </div>
                 <div class="g-recaptcha" data-sitekey="6Lcamr0ZAAAAACLcqzusVVt7DU8_3UwQ84UWeLU1"></div>
             </form>
-            <div id="output-area"></div>
+
             <div class="col mt-auto mb-auto">
-                <h3>Let's get to know each-other!</h3>
-                <p id="footer-text">I'd love to hear from you! Whether it be feedback on my site, interest in having me
+                <h2 id="contact-me-header" class="p-0 pl-md-5">Let's get to know each-other!</h2>
+                <p id="contact-me-text" class="p-0 pl-md-5">I'd love to hear from you! Whether it be feedback on my
+                    site, interest in having me
                     come work for
                     you, or even if you just want to chat. Please feel free to reach out, I'll answer your email within
                     a business day and get right back to you!</p>
@@ -242,9 +248,9 @@
 <script crossorigin="anonymous"
         integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA="
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
-<script crossorigin="anonymous"
-        integrity="sha256-F6h35Qw6sweK+t7SiOJX+2bpSAa3b/fnlrVCJvmEj1A="
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"
+        integrity="sha512-O/nUTF5mdFkhEoQHFn9N5wmgYyW323JO6v8kr6ltSRKriZyTr/8417taVWeabVS4iONGk2V444QD0P2cwhuTkg=="
+        crossorigin="anonymous"></script>
 <script crossorigin="anonymous"
         integrity="sha256-0Yg/eibVdKyxkuVo1Qwh0DspoUCHvSbm/oOoYVz32BQ="
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
